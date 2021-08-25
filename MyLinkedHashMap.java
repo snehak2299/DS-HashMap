@@ -48,6 +48,11 @@ public class MyLinkedHashMap<K, V> {
         }
 
     }
+    public void delete(K key) {
+		int index = this.getBucketIndex(key);
+		MyLinkedList myLinked = this.myBucketArray.get(index);
+		myLinked.deleteAvoidable(key);
+	}
 
     @Override
     public String toString() {

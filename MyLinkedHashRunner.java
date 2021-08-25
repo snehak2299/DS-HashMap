@@ -15,6 +15,8 @@ public class MyLinkedHashRunner {
 				myLinkedHashMap.add(word, value);
 			}
 			System.out.println(myLinkedHashMap);
+			myLinkedHashMap.delete("avoidable is deleted from the list");
+			System.out.println(myLinkedHashMap);
 		} 
 	
 

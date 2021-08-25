@@ -77,6 +77,19 @@ public class MyLinkedList<K> {
 
 
     }
+    public void deleteAvoidable(K key) {
+		INode temp = head;
+		INode before = null;
+		while(temp!=null) {
+			if (temp.getKey().equals(key)) {
+				temp = temp.getNext();
+				before.setNext(temp);
+				break;
+			}
+			before = temp;
+			temp = temp.getNext();
+		}
+	}
 
     @Override
     public String toString() {
